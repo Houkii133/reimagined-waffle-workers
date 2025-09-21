@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: infra/dockerfiles/backend.Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ../.env.example
+    depends_on:
+      - db
+      - redis
+  frontend:
+    build:
+      context: ..
+      dockerfile: infra/dockerfiles/frontend.Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_BASE_URL=http://backend:8000/api/v1
+    depends_on:
+      - backend
+  worker:
+    build:
+      context: ..
+      dockerfile: infra/dockerfiles/backend.Dockerfile
+    command: ["poetry", "run", "celery", "-A", "app.tasks.celery_app.celery_app", "worker", "--loglevel=info"]
+    env_file:
+      - ../.env.example
+    depends_on:
+      - backend
+      - redis
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: jobboard
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"

@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: jobboard
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 10s --health-timeout 5s --health-retries 5
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+    env:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@localhost:5432/jobboard
+      SYNC_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/jobboard
+      SECRET_KEY: test
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install backend deps
+        working-directory: backend
+        run: |
+          pip install poetry==1.6.1
+          poetry config virtualenvs.create false
+          poetry install
+      - name: Run backend tests
+        working-directory: backend
+        run: poetry run pytest
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install frontend deps
+        working-directory: frontend
+        run: npm install
+      - name: Run frontend tests
+        working-directory: frontend
+        run: npm test -- --runInBand
