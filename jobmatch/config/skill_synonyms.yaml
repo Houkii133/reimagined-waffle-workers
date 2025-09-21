@@ -1,0 +1,114 @@
+skills:
+  js: JavaScript
+  javascript: JavaScript
+  py: Python
+  python3: Python
+  node: Node.js
+  reactjs: React
+  react.js: React
+  ts: TypeScript
+  sql: SQL
+  postgres: PostgreSQL
+  postgresql: PostgreSQL
+  ml: Machine Learning
+  machine learning: Machine Learning
+  nlp: Natural Language Processing
+  ai: Artificial Intelligence
+  data analysis: Data Analysis
+  data analyst: Data Analysis
+  excel: Microsoft Excel
+  power bi: Power BI
+  tableau: Tableau
+  docker: Docker
+  kubernetes: Kubernetes
+  aws: AWS
+  amazon web services: AWS
+  gcp: GCP
+  azure: Azure
+  ci/cd: CI/CD
+  devops: DevOps
+  frontend developer: Front-End Engineering
+  frontend engineer: Front-End Engineering
+  backend developer: Back-End Engineering
+  backend engineer: Back-End Engineering
+  product manager: Product Management
+  scrum master: Agile Project Management
+  leadership: Leadership
+soft_skills:
+  communication skills: communication
+  communicates: communication
+  mentor: mentorship
+  mentoring: mentorship
+  cross-functional: collaboration
+  cross functional: collaboration
+  ownership mindset: ownership
+  takes ownership: ownership
+  self starter: autonomy
+  autonomous: autonomy
+  team player: teamwork
+  detail oriented: detail-orientation
+  problem solving: problem-solving
+  analytical: analytical-thinking
+  customer focused: customer-focus
+  customer obsessed: customer-focus
+  inclusive: inclusivity
+  diversity: inclusivity
+  servant leader: leadership
+  coach: mentorship
+  collaborative: collaboration
+  adaptable: adaptability
+  adaptable mindset: adaptability
+roles:
+  frontend dev: Front-End Engineer
+  frontend developer: Front-End Engineer
+  frontend engineer: Front-End Engineer
+  backend dev: Back-End Engineer
+  backend developer: Back-End Engineer
+  backend engineer: Back-End Engineer
+  fullstack developer: Full-Stack Engineer
+  full stack engineer: Full-Stack Engineer
+  data scientist: Data Scientist
+  data analyst: Data Analyst
+  machine learning engineer: Machine Learning Engineer
+  ml engineer: Machine Learning Engineer
+  product manager: Product Manager
+  project manager: Project Manager
+  data engineer: Data Engineer
+  devops engineer: DevOps Engineer
+  site reliability engineer: Site Reliability Engineer
+  sre: Site Reliability Engineer
+  qa engineer: QA Engineer
+  quality assurance: QA Engineer
+  support engineer: Support Engineer
+seniority:
+  entry level: junior
+  junior: junior
+  mid-level: mid
+  mid level: mid
+  intermediate: mid
+  senior: senior
+  lead: lead
+  principal: lead
+  staff: lead
+industries:
+  fintech: FinTech
+  finance: Finance
+  healthcare: Healthcare
+  health care: Healthcare
+  health-tech: HealthTech
+  healthtech: HealthTech
+  ecommerce: E-Commerce
+  e-commerce: E-Commerce
+  retail: Retail
+  education: Education
+  edtech: EdTech
+  energy: Energy
+  manufacturing: Manufacturing
+  logistics: Logistics
+  transportation: Transportation
+  media: Media
+  gaming: Gaming
+  entertainment: Entertainment
+  ai: AI
+  artificial intelligence: AI
+  consulting: Consulting

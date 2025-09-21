@@ -1,0 +1,10 @@
+hard: 0.22
+soft: 0.1
+title: 0.15
+seniority: 0.1
+industry: 0.06
+location: 0.1
+salary: 0.07
+growth: 0.1
+culture: 0.06
+recency: 0.04
