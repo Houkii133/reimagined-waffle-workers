@@ -1,0 +1,11 @@
+[project]
+name = "ai-job-matcher"
+version = "0.1.0"
+description = "Local stub for AI job matching engine"
+authors = [{name = "Stub", email = "stub@example.com"}]
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
